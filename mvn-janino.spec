@@ -4,11 +4,12 @@
 #
 Name     : mvn-janino
 Version  : 3.0.9
-Release  : 1
+Release  : 2
 URL      : http://repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 Source0  : http://repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 Source1  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
 Source2  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
+Source3  : https://repo1.maven.org/maven2/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -39,6 +40,9 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/com
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9
+
 
 %files
 %defattr(-,root,root,-)
@@ -47,4 +51,5 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/com
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
 /usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
+/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
 /usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
