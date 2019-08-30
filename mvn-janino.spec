@@ -4,14 +4,22 @@
 #
 Name     : mvn-janino
 Version  : 3.0.9
-Release  : 3
+Release  : 4
 URL      : http://repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 Source0  : http://repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
-Source1  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9.jar
-Source2  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9.pom
-Source3  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
-Source4  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
-Source5  : https://repo1.maven.org/maven2/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
+Source1  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/2.7.6/janino-2.7.6.pom
+Source2  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/3.0.7/janino-3.0.7.jar
+Source3  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/3.0.7/janino-3.0.7.pom
+Source4  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9.jar
+Source5  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9.pom
+Source6  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/2.7.6/commons-compiler-2.7.6.pom
+Source7  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.7/commons-compiler-3.0.7.jar
+Source8  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.7/commons-compiler-3.0.7.pom
+Source9  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
+Source10  : https://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
+Source11  : https://repo1.maven.org/maven2/org/codehaus/janino/janino-parent/2.7.6/janino-parent-2.7.6.pom
+Source12  : https://repo1.maven.org/maven2/org/codehaus/janino/janino-parent/3.0.7/janino-parent-3.0.7.pom
+Source13  : https://repo1.maven.org/maven2/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -29,6 +37,7 @@ data components for the mvn-janino package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
@@ -36,20 +45,44 @@ data components for the mvn-janino package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/2.7.6
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/2.7.6/janino-2.7.6.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.7
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.7/janino-3.0.7.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.7
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.7/janino-3.0.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9.pom
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/2.7.6
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/2.7.6/commons-compiler-2.7.6.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.7
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.7/commons-compiler-3.0.7.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.7
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.7/commons-compiler-3.0.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/2.7.6
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/2.7.6/janino-parent-2.7.6.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.7
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.7/janino-parent-3.0.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
 
 
 %files
@@ -57,9 +90,17 @@ cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/janino/jan
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/2.7.6/commons-compiler-2.7.6.pom
+/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.7/commons-compiler-3.0.7.jar
+/usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.7/commons-compiler-3.0.7.pom
 /usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.jar
 /usr/share/java/.m2/repository/org/codehaus/janino/commons-compiler/3.0.9/commons-compiler-3.0.9.pom
+/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/2.7.6/janino-parent-2.7.6.pom
+/usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.7/janino-parent-3.0.7.pom
 /usr/share/java/.m2/repository/org/codehaus/janino/janino-parent/3.0.9/janino-parent-3.0.9.pom
+/usr/share/java/.m2/repository/org/codehaus/janino/janino/2.7.6/janino-2.7.6.pom
+/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.7/janino-3.0.7.jar
+/usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.7/janino-3.0.7.pom
 /usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 /usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9.jar
 /usr/share/java/.m2/repository/org/codehaus/janino/janino/3.0.9/janino-3.0.9.pom
