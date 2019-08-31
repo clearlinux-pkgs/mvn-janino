@@ -4,7 +4,7 @@
 #
 Name     : mvn-janino
 Version  : 3.0.9
-Release  : 4
+Release  : 5
 URL      : http://repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 Source0  : http://repo1.maven.org/maven2/org/codehaus/janino/janino/3.0.9/janino-3.0.9-sources.jar
 Source1  : https://repo.maven.apache.org/maven2/org/codehaus/janino/janino/2.7.6/janino-2.7.6.pom
